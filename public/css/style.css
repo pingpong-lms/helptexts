@@ -1,0 +1,137 @@
+html {
+	font: 16px sans-serif;
+	color: #444;
+	background-color: #eee; 
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	overflow: hidden;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+
+
+.box {
+	padding: 1.5em;
+	background-color: white;
+	box-shadow: 0 0.2em 1em rgba(0,0,0,0.1);
+	margin: 1em;
+	border: 1px solid white;
+}
+
+
+.button-set {
+	text-align: right;
+}
+
+.button-set button {
+	cursor: pointer;
+	padding: 0.5em 0.8em;
+	background-color: #4B71C7;
+	color: #F3F8FF;
+	border: 0;
+	border-radius: 0.3em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.button-set button:hover {
+	background-color: #648EEC;
+	color: white;
+}
+
+.button-set button.secondary {
+    background-color: #A0BDDE;
+    color: white;
+}
+.button-set button.secondary:hover {
+    background-color: #C7D8EC;
+    color: white;
+}
+
+
+.menu {
+	flex: 0 1 20em;
+}
+
+
+.help-pages {
+	overflow: auto;
+}
+.help-page-editor {
+	flex: 1;
+	overflow: auto;
+}
+
+.page-form {
+	background-color: #E2E9F1;
+	padding: 1em;
+}
+
+.page-settings {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.editor-header {
+	display: flex;
+	justify-content: space-between;
+}
+.editor-header label {
+	flex: 1 1 auto;
+
+}
+.editor-header input {
+	box-sizing: border-box;
+}
+
+
+
+.page-item {
+	margin: 0.2em 0;
+}
+
+.page-info {
+    display: flex;
+}
+.page-info.selected {
+    background-color: #4B71C7;
+}
+
+.page-title {
+	cursor: pointer;
+}
+
+.page-children {
+	margin-left: 1em;
+	display: none;
+}
+
+.page-children.open {
+	display: block;
+}
+
+.page-info .folder {
+	cursor: pointer;
+}
+
+.page-info .icon {
+	transition: transform 0.2s linear;
+	width: 1.2em;
+    text-align: center;
+    margin-right: 0.3em;
+}
+
+.page-info .icon.open {
+	transform: rotate(90deg);
+}

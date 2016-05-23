@@ -1,0 +1,43 @@
+html {
+	font: 16px sans-serif;
+	color: #999;
+}
+
+
+/* THIS SHOULD NOT EXIST! */
+.help-heading1 {
+	font-size: 3em;
+	color: red;
+	text-decoration: line-through;
+}
+
+.help-heading2 {
+	font-size: 2em;
+	margin-top: 1em;
+}
+.help-heading3 {
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+.help-heading4 {
+	font-size: 1.2em;
+	margin-top: 1em;
+}
+
+table.nice-table {
+	background: green;
+}
+
+.info-box {
+	background-color: #e3ebcb;
+	border:2px solid #bada55;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+.from-developer {
+	border: 2px solid red;
+	border-radius: 1em;
+	margin: 1em 0;
+	padding: 1em;
+}

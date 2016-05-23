@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hjälpverktyget</title>
+		<meta charset="utf-8"/>
+    	<link rel="stylesheet" type="text/css" href="/style/style.css"/>
+    	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    
+	</head>
+	<body>
+
+		<aside class="menu box">
+			<div class="start-page">
+				<form class="commit-form">
+					<input type="number" name="rt" />
+					<button type="submit">Commit</button>
+				</form>
+			</div>
+
+			<button type="button" data-action="newPage">Ny sida</button>
+			<div class="help-pages"></div>
+		</aside>
+
+
+		<div class="help-page-editor">
+			<form name="help-page" class="page-form box" style="display:none">
+				<input type="hidden" name="pageId" />
+				<div class="page-settings">
+					<p>
+						<label>Sidans id: <input type="text" name="newPageId" /></label><br>
+						<label>Giverprop: <input type="text" name="giverprop" /></label><br>
+						<label>Förälder: <select name="parentPageId"></select><br>
+					</p>
+
+					<p>
+						<label><input type="checkbox" name="studentTopic" /> Studenter</label><br>
+						<label><input type="checkbox" name="teacherTopic" /> Lärare</label><br>
+						<label><input type="checkbox" name="adminTopic" /> Administratörer</label>
+					</p>
+
+					<p>
+						<label><input type="checkbox" name="isFolder" />Mapp</label><br>
+						<label><input type="checkbox" name="underDevelopment" />Under utveckling</label><br>
+					</p>
+				</div>
+
+				<div class="button-set">
+                    <button type="button" class="delete-page secondary" data-action="deletePage">Radera</button>
+                    <button type="button" class="new-sub-page secondary" data-action="newSubPage">Ny undersida</button>
+                    <button type="submit">Spara</button>
+                </div>
+			</form>
+
+
+			<form name="help-content" method="post" class="content-form box" style="display:none">
+                <input type="hidden" name="pageId" />
+                <input type="hidden" name="lang" />
+                <div class="editor-header">
+            	    <label>Sidans titel<br>
+                        <input type="text" name="title" />
+                    </label>
+                    <label>Version<br>
+                        <select name="version"></select>
+                    </label>
+                </div>
+                <p>
+                    <label>Innehåll<br>
+                        <textarea name="content" class="help-page-content-editor"></textarea>
+                    </label>
+                </p>
+                
+                <div class="button-set">
+                    <button type="submit" name="publish" value="false">Spara</button>
+                    <button type="submit" name="publish" value="true">Publicera</button>
+                </div>                    
+        	
+        	</form>
+		</div>
+
+
+		<script src="/js/nav.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/page.js"></script>
+		<script src="/js/page-list.js"></script>
+		<script src="/js/content.js"></script>
+	</body>
+</html>
