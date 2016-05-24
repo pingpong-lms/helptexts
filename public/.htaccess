@@ -10,4 +10,4 @@ RewriteRule (.*) - [L]
 RewriteRule ^api/(.*) /api.php?action=$1 [L,QSA]
 
 # Else rewrite requests for non-existent resources to /index.php
-RewriteRule (.*) /index.html?page=$1 [L]
+RewriteRule ^(.*) /index.html?page=$1 [L]

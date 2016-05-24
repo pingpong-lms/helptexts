@@ -705,6 +705,13 @@ UPDATE db_version SET version = 10;
 ----------------------------------------
 -- BEGIN BLOCK: 11
 ----------------------------------------
+
+CREATE OR REPLACE VIEW content_latest AS
+	SELECT DISTINCT ON (content.page_id, content.lang) *
+	FROM content
+	ORDER BY content.page_id, content.lang, content.version DESC;
+
+
 alter table content add column content_id serial primary key;
 alter table page add column student_topic boolean not null default false;
 alter table page alter column teacher_topic set not null;
