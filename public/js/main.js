@@ -90,7 +90,7 @@ function actionButtonClicked(e) {
 
 
 function getAllPages(callback) {
-	var url = "/api/page.php";
+	var url = "/api/page";
 	
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener("load", allPagesLoaded);

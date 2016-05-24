@@ -35,9 +35,9 @@ var Content = (function() {
 	}
 
 	function loadContent(pageId, lang, version) {
-		var url = "/api/content.php?pageId="+pageId;
-		if(lang) url += "&lang="+lang;
-		if(version) url += "&version="+version;
+		var url = "/api/content/"+pageId;
+		if(lang) url += "/"+lang;
+		if(version) url += "/"+version;
 
 		var xhr = new XMLHttpRequest();
 		xhr.addEventListener("load", contentLoaded);
@@ -101,7 +101,7 @@ var Content = (function() {
 
 		var xhr = new XMLHttpRequest();
 		xhr.addEventListener("load", contentSaved);
-		xhr.open("POST", "/api/content.php");
+		xhr.open("POST", "/api/content");
 		xhr.send(formData);
 	}
 

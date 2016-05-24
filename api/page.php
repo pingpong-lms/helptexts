@@ -1,17 +1,8 @@
 <?php
-
-include_once('api-init.php');
 include_once('../handler/PageHandler.php');
 
-
-
-
-
-if ($_SERVER['REQUEST_METHOD'] != ('GET' || 'POST')) {
-    $errors[] = "Request method not supported";
-    
-} else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $pageId = $_GET['pageId'];
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $pageId = $action[1];
     if($pageId == NULL){
         $allPages = PageHandler::getAllPages();
         
@@ -147,5 +138,3 @@ if ($_SERVER['REQUEST_METHOD'] != ('GET' || 'POST')) {
 
        
 }
-
-require "api-finish.php";

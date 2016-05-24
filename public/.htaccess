@@ -1,4 +1,13 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html?path=$1 [NC,L,QSA]
+RewriteBase /
+
+# If requested resource exists as a file or directory go to it
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule (.*) - [L]
+
+# Redirect all API-calls through api.php
+RewriteRule ^api/(.*) /api.php?action=$1 [L,QSA]
+
+# Else rewrite requests for non-existent resources to /index.php
+RewriteRule (.*) /index.html?page=$1 [L]
