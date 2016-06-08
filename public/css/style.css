@@ -103,9 +103,10 @@ input, button, textarea, select {
 
 .page-info {
     display: flex;
+    padding: 0.3em;
 }
 .page-info.selected {
-    background-color: #4B71C7;
+    background-color: #a0bdde;
 }
 
 .page-title {
